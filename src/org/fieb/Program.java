@@ -26,7 +26,7 @@ public class Program {
                 num2 = Integer.parseInt(parts[2]);
                 
                 if (equacao.contains("+")) {
-                    //Lógica para soma
+                    System.out.println("O resultado da soma é "+Soma.calcular(num1, num2));
                 }else if(equacao.contains("-")){
                     //Lógica para subtração
                 }else if(equacao.contains("*")){
