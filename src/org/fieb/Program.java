@@ -1,7 +1,6 @@
 package org.fieb;
 
 import java.util.Scanner;
-import javax.swing.JOptionPane;
 
 /**
  * @authors:
@@ -18,12 +17,9 @@ public class Program {
             try {
                 System.out.print("Insira sua equação: ");
                 String equacao = sc.nextLine();
-                String[] parts = null;
-                double num1;
-                double num2;
-                parts = equacao.split(" ");
-                num1 = Integer.parseInt(parts[0]);
-                num2 = Integer.parseInt(parts[2]);
+                String[] parts = parts = equacao.split(" ");
+                double num1 = Integer.parseInt(parts[0]);
+                double num2 = Integer.parseInt(parts[2]);
                 
                 if (equacao.contains("+")) {
                     System.out.println("O resultado da soma é "+Soma.calcular(num1, num2));
