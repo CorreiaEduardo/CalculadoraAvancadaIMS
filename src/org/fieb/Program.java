@@ -32,7 +32,7 @@ public class Program {
                 }else if(equacao.contains("*")){
                     //Lógica para multiplicação
                 }else if(equacao.contains("/")){
-                   //Lógica para Divisão
+                    System.out.println("O resultado da divisão é "+Divisao.calcular(num1, num2));
                 }   
             } catch (NullPointerException ex) {
                 System.out.println("Finalizando calculadora...");
