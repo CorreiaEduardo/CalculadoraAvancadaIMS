@@ -29,6 +29,8 @@ public class Program {
                     //Lógica para multiplicação
                 }else if(equacao.contains("/")){
                     System.out.println("O resultado da divisão é "+Divisao.calcular(num1, num2));
+                }else if(equacao.contains("l")){
+                    System.out.println("O resultado do logaritimo é "+Logaritimo.calcular(num1, num2));
                 }   
             } catch (NullPointerException ex) {
                 System.out.println("Finalizando calculadora...");
