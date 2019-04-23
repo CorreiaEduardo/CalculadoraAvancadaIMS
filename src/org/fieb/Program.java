@@ -24,7 +24,7 @@ public class Program {
                 if (equacao.contains("+")) {
                     System.out.println("O resultado da soma é "+Soma.calcular(num1, num2));
                 }else if(equacao.contains("-")){
-                    //Lógica para subtração
+                    System.out.println("O resultado da subtração é "+Subtracao.calcular(num1, num2));
                 }else if(equacao.contains("*")){
                     //Lógica para multiplicação
                 }else if(equacao.contains("/")){
