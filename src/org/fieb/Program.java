@@ -32,6 +32,9 @@ public class Program {
                 }else if(equacao.contains("l")){
                     System.out.println("O resultado do logaritimo é "+Logaritimo.calcular(num1, num2));
                 }   
+                else if(equacao.contains("%")){
+                    System.out.println("O resultado da porcentagem é "+Porcentagem.calcular(num1, num2));
+                }
             } catch (NullPointerException ex) {
                 System.out.println("Finalizando calculadora...");
                 break;
