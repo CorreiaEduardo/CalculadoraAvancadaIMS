@@ -26,7 +26,7 @@ public class Program {
                 }else if(equacao.contains("-")){
                     System.out.println("O resultado da subtração é "+Subtracao.calcular(num1, num2));
                 }else if(equacao.contains("*")){
-                    //Lógica para multiplicação
+                    System.out.println("O resultado da multiplicacao é "+ Multiplicacao.calculo(num1, num2));
                 }else if(equacao.contains("/")){
                     System.out.println("O resultado da divisão é "+Divisao.calcular(num1, num2));
                 }else if(equacao.contains("l")){
