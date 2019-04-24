@@ -10,5 +10,7 @@ package org.fieb;
  * @author felip
  */
 public class Logaritimo {
-    
+    public static double calcular(double x, double y){
+        return Math.log(x)/Math.log(y);
+    }
 }
