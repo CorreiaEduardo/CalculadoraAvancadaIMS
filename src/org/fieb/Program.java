@@ -11,15 +11,15 @@ import java.util.Scanner;
 public class Program {
 
     public static void main(String[] args) {
-        int opcao=10;
+        boolean quer_sair=false;
         
         System.out.println("Iniciando calculadora...");
         Scanner sc = new Scanner(System.in);
-        Scanner encerrar = new Scanner(System.in);
-        while (opcao!=0) {
+        while (quer_sair==false) {
             try {
-                System.out.print("Insira sua equação: ");
+                System.out.print("Insira sua equação: Ou digite apenas 0 para sair: ");
                 String equacao = sc.nextLine();
+                if(!(equacao.equals("0"))){
                 String[] parts = parts = equacao.split(" ");
                 double num1 = Double.parseDouble(parts[0]);
                 double num2 = Double.parseDouble(parts[2]);
@@ -43,14 +43,16 @@ public class Program {
                 }else if (operator.equals("^")) {
                     System.out.println("O resultado da exponenciação é "+Exponencial.calcular(num1, num2));
                 }
-            } catch(Exception ex){
-                System.out.println("Operação inválida, siga o modelo <operando><espaço><operação><espaço><operando>, onde os operandos podem ser \"+ , - , * , /\" e execute novamente.");
+            } 
+                else{
+                    quer_sair=true;
+                }
             }
-            System.out.println("");
-            System.out.print("Caso queira sair digite 0! \nCaso queira continuar insira qualquer outro numero: ");
-            opcao=encerrar.nextInt();
-            System.out.println("");    
+                catch(Exception ex){
+                    System.out.println("Operação inválida, siga o modelo <operando><espaço><operação><espaço><operando>, onde os operandos podem ser \"+ , - , * , /\" e execute novamente.");
+            }
+            }
         }
 
     }
-}
+
