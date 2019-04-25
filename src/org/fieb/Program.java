@@ -18,8 +18,8 @@ public class Program {
                 System.out.print("Insira sua equação: ");
                 String equacao = sc.nextLine();
                 String[] parts = parts = equacao.split(" ");
-                double num1 = Integer.parseInt(parts[0]);
-                double num2 = Integer.parseInt(parts[2]);
+                double num1 = Double.parseDouble(parts[0]);
+                double num2 = Double.parseDouble(parts[2]);
                 String operator = parts[1];
                 
                 if (operator.equals("+")) {
@@ -32,9 +32,11 @@ public class Program {
                     System.out.println("O resultado da divisão é "+Divisao.calcular(num1, num2));
                 }else if(operator.equalsIgnoreCase("l")){
                     System.out.println("O resultado do logaritimo é "+Logaritimo.calcular(num1, num2));
-                }   
-                else if(operator.equals("%")){
+                }else if(operator.equals("%")){
                     System.out.println("O resultado da porcentagem é "+Porcentagem.calcular(num1, num2));
+                }else if (operator.equals("v")) {
+                    System.out.println("tesdasdst");
+                    System.out.println("O resultado da raiz é "+Raiz.calcular(num1, num2));
                 }
             } catch (NullPointerException ex) {
                 System.out.println("Finalizando calculadora...");
