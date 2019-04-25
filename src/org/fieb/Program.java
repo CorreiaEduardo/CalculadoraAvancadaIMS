@@ -11,9 +11,12 @@ import java.util.Scanner;
 public class Program {
 
     public static void main(String[] args) {
+        int opcao=10;
+        
         System.out.println("Iniciando calculadora...");
         Scanner sc = new Scanner(System.in);
-        while (true) {            
+        Scanner encerrar = new Scanner(System.in);
+        while (opcao!=0) {
             try {
                 System.out.print("Insira sua equação: ");
                 String equacao = sc.nextLine();
@@ -21,6 +24,7 @@ public class Program {
                 double num1 = Double.parseDouble(parts[0]);
                 double num2 = Double.parseDouble(parts[2]);
                 String operator = parts[1];
+                
                 
                 if (operator.equals("+")) {
                     System.out.println("O resultado da soma é "+Soma.calcular(num1, num2));
@@ -39,12 +43,13 @@ public class Program {
                 }else if (operator.equals("^")) {
                     System.out.println("O resultado da exponenciação é "+Exponencial.calcular(num1, num2));
                 }
-            } catch (NullPointerException ex) {
-                System.out.println("Finalizando calculadora...");
-                break;
-            }catch(Exception ex){
+            } catch(Exception ex){
                 System.out.println("Operação inválida, siga o modelo <operando><espaço><operação><espaço><operando>, onde os operandos podem ser \"+ , - , * , /\" e execute novamente.");
             }
+            System.out.println("");
+            System.out.print("Caso queira sair digite 0! \nCaso queira continuar insira qualquer outro numero: ");
+            opcao=encerrar.nextInt();
+            System.out.println("");    
         }
 
     }
