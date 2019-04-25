@@ -35,8 +35,9 @@ public class Program {
                 }else if(operator.equals("%")){
                     System.out.println("O resultado da porcentagem é "+Porcentagem.calcular(num1, num2));
                 }else if (operator.equals("v")) {
-                    System.out.println("tesdasdst");
                     System.out.println("O resultado da raiz é "+Raiz.calcular(num1, num2));
+                }else if (operator.equals("^")) {
+                    System.out.println("O resultado da exponenciação é "+Exponencial.calcular(num1, num2));
                 }
             } catch (NullPointerException ex) {
                 System.out.println("Finalizando calculadora...");
